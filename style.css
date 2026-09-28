@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+}
+
+
+/* Navbar */
+.navbar {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    position: relative;
+    background: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #444;
+}
+
+.username {
+    margin-left: auto;
+    margin-right: 15px;
+    color: #10aee8;
+    font-size: 13px;
+}
+
+
+/* Hamburger button */
+.menu-btn {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* Menu */
+.menu-list {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    width: 180px;
+    height: 100vh;
+    background: black;
+    z-index: 10;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-list a {
+    color: white;
+    text-decoration: none;
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+
+/* IMPORTANT:
+   Menu appears when hamburger button gets focus */
+.menu-btn:focus + .menu-list {
+    display: flex;
+}
+
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 70px;
+}
+
+.content {
+    max-width: 550px;
+}
+
+.content h1 {
+    font-size: 42px;
+    color: #4b5963;
+    line-height: 1.1;
+}
+
+.content h1 span {
+    color: #00aeea;
+}
+
+.content p {
+    margin-top: 15px;
+    color: #777;
+    line-height: 1.5;
+}
+
+.service-btn {
+    margin-top: 25px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #00aeea;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.washing-machine {
+    font-size: 100px;
+    text-align: center;
+}
+
+
+/* =========================
+   MOBILE VIEW
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .username {
+        font-size: 11px;
+    }
+
+    /* Hamburger visible only on mobile */
+    .menu-btn {
+        display: block;
+    }
+
+    /* Hero */
+    .hero {
+        display: block;
+        padding: 25px 15px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 13px;
+    }
+
+    .service-btn {
+        width: 100%;
+    }
+
+    .image {
+        width: 50%;
+        height: 150px;
+    }
+
+    .washing-machine {
+        font-size: 90px;
+    }
+}
